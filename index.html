@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lift Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <label>Lifts: </label>
+    <input id="lift-input" placeholder='number of lifts' type="number" onkeydown="if(event.key === '.'){event.preventDefault();}" oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
+    <label> Floors: </label>
+    <input id="floor-input" placeholder='number of floors' type="number" onkeydown="if(event.key === '.'){event.preventDefault();}" oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');">
+    <button id="create">Create</button>
+    <div class="container">
+        <div id="floors" style="display: flex;flex-direction: column-reverse;">
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
